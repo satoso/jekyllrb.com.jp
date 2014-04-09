@@ -792,6 +792,7 @@ Jekyll handles two special Redcarpet extensions:
   GitHub はそれらの熱心な採用を避けられないように始めているからです。
   Jekyll と使用するとき、 Redcarpet の `fenced_code_blocks` 拡張は通常不活性です:
   代わりに、あなたは無効化した fenced code 拡張の反転バージョンを使用することができます。
+
     最初の区切りのあとにハイライトする言語を指定できることに注意してください:
 
         ```ruby
@@ -801,10 +802,13 @@ Jekyll handles two special Redcarpet extensions:
     fenced code block と Pygments を両方有効にすると、静的なコードをハイライトします。
     Pygments なしでは、様々な JavaScript コードハイライトライブラリによってヒントとして使用することができ、
     `<code>` 要素に `class="LANGUAGE"` を追加します。
-
+- `smart` --- この擬似拡張は SmartyPants をオンにし、
+   straight quotes から curly quotes の変換、
+   ハイフンの em (`---`) ダッシュ と en (`--`) ダッシュの実行を行います。
 
 <!--original
 - `no_fenced_code_blocks` --- By default, Jekyll sets the `fenced_code_blocks` extension (for delimiting code blocks with triple tildes or triple backticks) to `true`, probably because GitHub's eager adoption of them is starting to make them inescapable. Redcarpet's normal `fenced_code_blocks` extension is inert when used with Jekyll; instead, you can use this inverted version of the extension for disabling fenced code.
+
     Note that you can also specify a language for highlighting after the first delimiter:
 
         ```ruby
@@ -812,13 +816,6 @@ Jekyll handles two special Redcarpet extensions:
         ```
 
     With both fenced code blocks and highlighter enabled, this will statically highlight the code; without any syntax highlighter, it will add a `class="LANGUAGE"` attribute to the `<code>` element, which can be used as a hint by various JavaScript code highlighting libraries.
--->
-
-- `smart` --- この擬似拡張は SmartyPants をオンにし、
-   straight quotes から curly quotes の変換、
-   ハイフンの em (`---`) ダッシュ と en (`--`) ダッシュの実行を行います。
-
-<!--original
 - `smart` --- This pseudo-extension turns on SmartyPants, which converts straight quotes to curly quotes and runs of hyphens to em (`---`) and en (`--`) dashes.
 -->
 
